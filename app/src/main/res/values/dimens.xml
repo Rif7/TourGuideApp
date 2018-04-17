@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Action Bar  -->
+    <dimen name="action_bar_height">64dp</dimen>
+
+    <!-- Menu Header -->
+    <dimen name="menu_header_height">144dp</dimen>
+
+</resources>

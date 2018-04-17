@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mnu_general_information"
+            android:title="@string/general_information" />
+        <item
+            android:id="@+id/mnu_sightseeing"
+            android:title="@string/sightseeing" />
+        <item
+            android:id="@+id/mnu_hotels"
+            android:title="@string/hotels" />
+        <item
+            android:id="@+id/mnu_restaurants"
+            android:title="@string/restaurants" />
+        <item
+            android:id="@+id/mnu_museums"
+            android:title="@string/museums" />
+        <item
+            android:id="@+id/mnu_saved_places"
+            android:title="@string/saved_places" />
+        <item
+            android:id="@+id/mnu_interesting_apps"
+            android:title="@string/interesting_apps" />
+    </group>
+</menu>

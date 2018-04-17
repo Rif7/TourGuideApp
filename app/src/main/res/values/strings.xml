@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TourGuideApp</string>
+    <string name="general_information">General Information</string>
+    <string name="sightseeing">Sightseeing</string>
+    <string name="hotels">Hotels</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="museums">Museums</string>
+    <string name="saved_places">Saved Places</string>
+    <string name="interesting_apps">Interesting Apps</string>
 </resources>
