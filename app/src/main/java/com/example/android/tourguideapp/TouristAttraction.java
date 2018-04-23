@@ -4,14 +4,8 @@ package com.example.android.tourguideapp;
 public class TouristAttraction {
     public static final int NO_IMAGE = -1;
 
-    // Tourist Attraction types
-    public static final int SIGHTSEEING = 1;
-    public static final int HOTEL = 2;
-    public static final int RESTAURANT = 3;
-    public static final int MUSEUM = 4;
-
     // Obligatory
-    private int type;
+    private AttractionType type;
     private String name;
     private String description;
     private boolean isSaved;
@@ -22,23 +16,19 @@ public class TouristAttraction {
     private String website;
     private String location;
 
-    TouristAttraction(int type, String name, String description) {
+    TouristAttraction(AttractionType type, String name, String description,
+                      int imageID, String phone, String website, String location) {
         this.type = type;
         this.name = name;
         this.description = description;
         this.isSaved = false;
-    }
-
-    TouristAttraction(int type, String name, String description,
-                      int imageID, String phone, String website, String location) {
-        this(type, name, description);
         this.imageID = imageID;
         this.phone = phone;
         this.website = website;
         this.location = location;
     }
 
-    public int getType() {
+    public AttractionType getType() {
         return type;
     }
 
@@ -54,7 +44,7 @@ public class TouristAttraction {
         if (imageID != NO_IMAGE) {
             return imageID;
         } else {
-            return getDefaultImage();
+            return type.getDefaultImageID();
         }
 
     }
@@ -93,21 +83,6 @@ public class TouristAttraction {
 
     public void setSaved(boolean saved) {
         isSaved = saved;
-    }
-
-    private int getDefaultImage() {
-        int imageId = NO_IMAGE;
-        switch (type) {
-            case SIGHTSEEING:
-                imageId = R.drawable.ic_sightseeing;
-            case HOTEL:
-                imageId = R.drawable.ic_hotel;
-            case RESTAURANT:
-                imageId = R.drawable.ic_restaurant;
-            case MUSEUM:
-                imageId = R.drawable.ic_museum;
-        }
-        return imageId;
     }
 
 }
