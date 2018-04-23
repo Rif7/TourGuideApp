@@ -5,8 +5,7 @@ public class TouristAttraction {
     public static final int NO_IMAGE = -1;
 
     // Tourist Attraction types
-    public static final int NOT_DEFINED = 0;
-    public static final int HIGHLIGHT = 1;
+    public static final int SIGHTSEEING = 1;
     public static final int HOTEL = 2;
     public static final int RESTAURANT = 3;
     public static final int MUSEUM = 4;
@@ -14,7 +13,7 @@ public class TouristAttraction {
     // Obligatory
     private int type;
     private String name;
-    private String descripion;
+    private String description;
     private boolean isSaved;
 
     // Optional
@@ -23,16 +22,16 @@ public class TouristAttraction {
     private String website;
     private String location;
 
-    TouristAttraction(int type, String name, String descripion) {
+    TouristAttraction(int type, String name, String description) {
         this.type = type;
         this.name = name;
-        this.descripion = descripion;
+        this.description = description;
         this.isSaved = false;
     }
 
-    TouristAttraction(int type, String name, String descripion,
+    TouristAttraction(int type, String name, String description,
                       int imageID, String phone, String website, String location) {
-        this(type, name, descripion);
+        this(type, name, description);
         this.imageID = imageID;
         this.phone = phone;
         this.website = website;
@@ -47,12 +46,17 @@ public class TouristAttraction {
         return name;
     }
 
-    public String getDescripion() {
-        return descripion;
+    public String getDescription() {
+        return description;
     }
 
     public int getImageID() {
-        return imageID;
+        if (imageID != NO_IMAGE) {
+            return imageID;
+        } else {
+            return getDefaultImage();
+        }
+
     }
 
     public String getPhone() {
@@ -89,6 +93,21 @@ public class TouristAttraction {
 
     public void setSaved(boolean saved) {
         isSaved = saved;
+    }
+
+    private int getDefaultImage() {
+        int imageId = NO_IMAGE;
+        switch (type) {
+            case SIGHTSEEING:
+                imageId = R.drawable.ic_sightseeing;
+            case HOTEL:
+                imageId = R.drawable.ic_hotel;
+            case RESTAURANT:
+                imageId = R.drawable.ic_restaurant;
+            case MUSEUM:
+                imageId = R.drawable.ic_museum;
+        }
+        return imageId;
     }
 
 }
