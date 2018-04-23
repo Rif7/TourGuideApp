@@ -2,24 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <group android:checkableBehavior="single">
         <item
+            android:icon="@drawable/ic_information"
             android:id="@+id/mnu_general_information"
             android:title="@string/general_information" />
         <item
+            android:icon="@drawable/ic_sightseeing"
             android:id="@+id/mnu_sightseeing"
             android:title="@string/sightseeing" />
         <item
+            android:icon="@drawable/ic_hotel"
             android:id="@+id/mnu_hotels"
             android:title="@string/hotels" />
         <item
+            android:icon="@drawable/ic_restaurant"
             android:id="@+id/mnu_restaurants"
             android:title="@string/restaurants" />
         <item
+            android:icon="@drawable/ic_museum"
             android:id="@+id/mnu_museums"
             android:title="@string/museums" />
         <item
+            android:icon="@drawable/ic_star_unsaved"
             android:id="@+id/mnu_saved_places"
             android:title="@string/saved_places" />
         <item
+            android:icon="@drawable/ic_google_play"
             android:id="@+id/mnu_interesting_apps"
             android:title="@string/interesting_apps" />
     </group>
