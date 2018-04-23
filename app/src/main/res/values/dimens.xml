@@ -6,4 +6,7 @@
     <!-- Menu Header -->
     <dimen name="menu_header_height">144dp</dimen>
 
+    <!-- List adapter -->
+    <dimen name="list_adapter_heigth">80dp</dimen>
+
 </resources>
