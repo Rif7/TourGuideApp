@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements SightseeingFragment.OnFragmentInteractionListener,
+        implements AttractionsListFragment.OnFragmentInteractionListener,
         GeneralInformationFragment.OnFragmentInteractionListener {
     private DrawerLayout mDrawerLayout;
     private Fragment fragment;
@@ -62,7 +62,20 @@ public class MainActivity extends AppCompatActivity
                 fragmentClass = GeneralInformationFragment.class;
                 break;
             case R.id.mnu_sightseeing:
-                fragmentClass = SightseeingFragment.class;
+                AttractionsListFragment.attractionType = AttractionType.SIGHTSEEING;
+                fragmentClass = AttractionsListFragment.class;
+                break;
+            case R.id.mnu_hotels:
+                AttractionsListFragment.attractionType = AttractionType.HOTEL;
+                fragmentClass = AttractionsListFragment.class;
+                break;
+            case R.id.mnu_museums:
+                AttractionsListFragment.attractionType = AttractionType.MUSEUM;
+                fragmentClass = AttractionsListFragment.class;
+                break;
+            case R.id.mnu_restaurants:
+                AttractionsListFragment.attractionType = AttractionType.RESTAURANT;
+                fragmentClass = AttractionsListFragment.class;
                 break;
             default:
                 fragmentClass = GeneralInformationFragment.class;
