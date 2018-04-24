@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity
         implements SightseeingFragment.OnFragmentInteractionListener,
         GeneralInformationFragment.OnFragmentInteractionListener {
     private DrawerLayout mDrawerLayout;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
-        TouristAttractionManager.getInstance().createAttrations();
+        TouristAttractionManager.getInstance().createAttractions();
 
         // Setting Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity
 
         // Adding initial fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_fragment,
+        fragmentManager.beginTransaction().add(R.id.main_fragment,
                 new GeneralInformationFragment()).commit();
 
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity
 
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
-        Fragment fragment = null;
+        fragment = null;
         Class fragmentClass;
         switch(menuItem.getItemId()) {
             case R.id.mnu_general_information:
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         setTitle(menuItem.getTitle());
         // Close the navigation drawer
         mDrawerLayout.closeDrawers();
-
+        getApplicationContext();
     }
 
 
@@ -95,9 +96,9 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
+
 }

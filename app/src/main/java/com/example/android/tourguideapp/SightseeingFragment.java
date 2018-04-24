@@ -1,12 +1,16 @@
 package com.example.android.tourguideapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 
@@ -18,7 +22,7 @@ import android.widget.ListView;
  * Use the {@link SightseeingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SightseeingFragment extends android.support.v4.app.Fragment  {
+public class SightseeingFragment extends android.support.v4.app.Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,6 +33,7 @@ public class SightseeingFragment extends android.support.v4.app.Fragment  {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    Button btn;
 
     public SightseeingFragment() {
         // Required empty public constructor
@@ -67,21 +72,26 @@ public class SightseeingFragment extends android.support.v4.app.Fragment  {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_sightseeing, container, false);
 
-        TouristAttractionAdapter adapter = new TouristAttractionAdapter(getActivity(),
+        final TouristAttractionAdapter adapter = new TouristAttractionAdapter(getActivity(),
                 TouristAttractionManager.getInstance().getTouristsAttrations(AttractionType.SIGHTSEEING));
 
         ListView listView = (ListView) rootView.findViewById(R.id.sightseeing_list);
         listView.setAdapter(adapter);
+//        listView.setItemsCanFocus(false);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                TouristAttractionManager.getInstance().detailedTouristAttraction = adapter.getItem(position);
+                Intent changeActivityIntent = new Intent(getActivity(), TouristAttractionDetailsActivity.class);
+                getActivity().startActivity(changeActivityIntent);
+            }
+        });
 
         return rootView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Context context) {
@@ -100,6 +110,8 @@ public class SightseeingFragment extends android.support.v4.app.Fragment  {
         mListener = null;
     }
 
+
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -114,4 +126,5 @@ public class SightseeingFragment extends android.support.v4.app.Fragment  {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TouristAttractionManager {
+    public TouristAttraction detailedTouristAttraction;
     private HashMap<AttractionType, ArrayList<TouristAttraction>> touristsAttractions;
 
     private static final TouristAttractionManager ourInstance = new TouristAttractionManager();
@@ -45,8 +46,9 @@ public class TouristAttractionManager {
         return saved;
     }
 
-    public void createAttrations() {
+    public void createAttractions() {
         // temp dummy data TODO
         addAttraction(AttractionType.SIGHTSEEING, "Main Square", "Biggest square in Europe");
+        addAttraction(AttractionType.SIGHTSEEING, "Nowa Huta", "Post Industrial Area");
     }
 }
