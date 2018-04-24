@@ -22,6 +22,14 @@
                 android:background="@color/colorPrimary"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_fragment"
+                android:layout_marginTop="@dimen/action_bar_height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout >
+
         </FrameLayout>
 
         <android.support.design.widget.NavigationView
@@ -34,13 +42,5 @@
             app:headerLayout="@layout/menu_header"/>
 
     </android.support.v4.widget.DrawerLayout>
-
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/main_fragment"
-        android:layout_marginTop="@dimen/action_bar_height"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout >
 
 </FrameLayout>
