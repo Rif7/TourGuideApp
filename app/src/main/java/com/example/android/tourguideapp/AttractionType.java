@@ -4,7 +4,8 @@ public enum AttractionType {
     SIGHTSEEING("SIGHTSEEING"),
     HOTEL("HOTEL"),
     RESTAURANT("RESTAURANT"),
-    MUSEUM("MUSEUM");
+    MUSEUM("MUSEUM"),
+    SAVED("SAVED PLACE");
 
     private int defaultImageID;
 

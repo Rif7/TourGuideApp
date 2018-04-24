@@ -20,11 +20,11 @@ public class TouristAttractionManager {
         }
     }
 
-    public ArrayList<TouristAttraction> getTouristsAttrations(AttractionType type) {
+    public ArrayList<TouristAttraction> getTouristsAttractions(AttractionType type) {
         return touristsAttractions.get(type);
     }
 
-    public void addAttraction(AttractionType type, String name, String description) {
+    private void addAttraction(AttractionType type, String name, String description) {
         addAttraction(type, name, description, TouristAttraction.NO_IMAGE,
         null, null, null);
     }
@@ -36,14 +36,14 @@ public class TouristAttractionManager {
                 phone, website, location));
     }
 
-    public ArrayList<TouristAttraction> getSavedAttractions() {
-        ArrayList<TouristAttraction> saved = new ArrayList<>();
-        for (AttractionType type : touristsAttractions.keySet()) {
-            for (TouristAttraction ta: touristsAttractions.get(type)) {
-                if (ta.isSaved()) saved.add(ta);
-            }
-        }
-        return saved;
+    public void addSavedTouristAttractions(TouristAttraction touristAttractionToSave) {
+        touristAttractionToSave.setSaved(true);
+        touristsAttractions.get(AttractionType.SAVED).add(touristAttractionToSave);
+    }
+
+    public void deleteSavedTouristAttractions(TouristAttraction touristAttractionToSave) {
+        touristAttractionToSave.setSaved(false);
+        touristsAttractions.get(AttractionType.SAVED).remove(touristAttractionToSave);
     }
 
     public void createAttractions() {

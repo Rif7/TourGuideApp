@@ -77,6 +77,10 @@ public class MainActivity extends AppCompatActivity
                 AttractionsListFragment.attractionType = AttractionType.RESTAURANT;
                 fragmentClass = AttractionsListFragment.class;
                 break;
+            case R.id.mnu_saved_places:
+                AttractionsListFragment.attractionType = AttractionType.SAVED;
+                fragmentClass = AttractionsListFragment.class;
+                break;
             default:
                 fragmentClass = GeneralInformationFragment.class;
         }

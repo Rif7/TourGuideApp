@@ -26,7 +26,7 @@ public class AttractionsListFragment extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.fragment_attractions, container, false);
 
         final TouristAttractionAdapter adapter = new TouristAttractionAdapter(getActivity(),
-                TouristAttractionManager.getInstance().getTouristsAttrations(AttractionType.SIGHTSEEING));
+                TouristAttractionManager.getInstance().getTouristsAttractions(attractionType));
 
         TextView listName = (TextView) rootView.findViewById(R.id.list_name);
         listName.setText(attractionType.toString());
