@@ -49,7 +49,8 @@ public class TouristAttractionManager {
 
     public void createAttractions() {
         // temp dummy data TODO
-        addAttraction(AttractionType.SIGHTSEEING, "Main Square", "Biggest square in Europe");
+        addAttraction(AttractionType.SIGHTSEEING, "Main Square", "Biggest square in Europe",
+                TouristAttraction.NO_IMAGE, "444 555 666","www.rynek.pl" , "Krakow, Rynek  1");
         addAttraction(AttractionType.SIGHTSEEING, "Nowa Huta", "Post Industrial Area");
     }
 }

@@ -12,7 +12,7 @@
     <!-- Details Activity -->
     <dimen name="details_photo_height">240dp</dimen>
     <dimen name="details_item_height">48dp</dimen>
-    <dimen name="details_item_margin">8dp</dimen>
-    <dimen name="details_item_icon_size">32dp</dimen>
+    <dimen name="details_item_padding">8dp</dimen>
+    <dimen name="details_item_icon_size">48dp</dimen>
 
 </resources>

@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="details_item_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/details_item_height</item>
+        <!-- default visibility is gone if attraction has given data should be changed to visible -->
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="details_icon_style" >
+        <item name="android:layout_width">@dimen/details_item_icon_size</item>
+        <item name="android:layout_height">@dimen/details_item_icon_size</item>
+        <item name="android:padding">@dimen/details_item_padding</item>
+    </style>
+
+    <style name="details_info_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/details_item_padding</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>
