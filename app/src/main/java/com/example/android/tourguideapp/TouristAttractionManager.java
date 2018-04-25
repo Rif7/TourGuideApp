@@ -18,6 +18,7 @@ public class TouristAttractionManager {
         for (AttractionType at: AttractionType.values()) {
             touristsAttractions.put(at, new ArrayList<TouristAttraction>());
         }
+        createAttractions();
     }
 
     public ArrayList<TouristAttraction> getTouristsAttractions(AttractionType type) {

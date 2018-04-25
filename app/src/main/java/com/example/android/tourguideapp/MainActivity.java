@@ -17,15 +17,13 @@ public class MainActivity extends AppCompatActivity
         implements AttractionsListFragment.OnFragmentInteractionListener,
         GeneralInformationFragment.OnFragmentInteractionListener {
     private DrawerLayout mDrawerLayout;
-    private Fragment fragment;
+    private static Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
-
-        TouristAttractionManager.getInstance().createAttractions();
 
         // Setting Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -35,10 +33,23 @@ public class MainActivity extends AppCompatActivity
         actionbar.setTitle(R.string.app_name);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black); // TODO
 
-        // Adding initial fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.main_fragment,
-                new GeneralInformationFragment()).commit();
+        if (fragment == null) {
+            // Adding initial fragment
+            fragmentManager.beginTransaction().add(R.id.main_fragment,
+                    new GeneralInformationFragment()).commit();
+        } else {
+            //Restore previous fragment
+            Fragment initFragment = null;
+            try {
+                initFragment = (Fragment) fragment.getClass().newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            fragmentManager.beginTransaction().add(R.id.main_fragment,
+                    initFragment).commit();
+        }
+
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -101,7 +112,6 @@ public class MainActivity extends AppCompatActivity
         mDrawerLayout.closeDrawers();
         getApplicationContext();
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
