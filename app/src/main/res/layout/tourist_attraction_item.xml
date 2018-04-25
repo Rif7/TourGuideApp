@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/list_adapter_heigth">
+    android:layout_height="@dimen/list_adapter_heigtht">
 
     <ImageView
         android:id="@+id/ta_item_image"
