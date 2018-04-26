@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GeneralInformationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="General Information Fragment"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/krakow_map"
+        android:contentDescription="@string/map_preview_of_krakow" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/details_item_padding"
+        android:background="@color/location"
+        android:text="@string/short_information"/>
+
+</RelativeLayout>

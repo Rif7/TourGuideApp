@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorHeader">#af7d94</color>
 
     <color name="phone">#59ff40</color>
     <color name="website">#365dea</color>
@@ -11,5 +12,10 @@
     <color name="phone_background">#77d26f</color>
     <color name="website_background">#77a0e7</color>
     <color name="location_background">#d9f183</color>
+
+    <color name="sightseeing_background">#9cc40f</color>
+    <color name="museum_background">#10d690</color>
+    <color name="restaurant_background">#d49d30</color>
+    <color name="hotel_background">#c753d9</color>
 
 </resources>

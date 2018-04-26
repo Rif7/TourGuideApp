@@ -8,6 +8,7 @@ public enum AttractionType {
     SAVED("SAVED PLACE");
 
     private int defaultImageID;
+    private int defaultColor;
 
     private final String name;
 
@@ -24,6 +25,17 @@ public enum AttractionType {
         HOTEL.defaultImageID = R.drawable.ic_hotel;
         RESTAURANT.defaultImageID = R.drawable.ic_restaurant;
         MUSEUM.defaultImageID = R.drawable.ic_museum;
+    }
+
+    static {
+        SIGHTSEEING.defaultColor = R.color.sightseeing_background;
+        HOTEL.defaultColor = R.color.hotel_background;
+        RESTAURANT.defaultColor = R.color.restaurant_background;
+        MUSEUM.defaultColor = R.color.museum_background;
+    }
+
+    public int getDefaultColor() {
+        return defaultColor;
     }
 
     public int getDefaultImageID() {

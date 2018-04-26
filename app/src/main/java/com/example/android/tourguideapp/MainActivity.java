@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity
         GeneralInformationFragment.OnFragmentInteractionListener {
     private DrawerLayout mDrawerLayout;
     private static Fragment fragment = null;
+    private ActionBar actionbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +29,15 @@ public class MainActivity extends AppCompatActivity
         // Setting Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionbar = getSupportActionBar();
+        actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setTitle(R.string.app_name);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black); // TODO
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (fragment == null) {
             // Adding initial fragment
-            fragmentManager.beginTransaction().add(R.id.main_fragment,
-                    new GeneralInformationFragment()).commit();
+            fragment = new GeneralInformationFragment();
+            fragmentManager.beginTransaction().add(R.id.main_fragment, fragment).commit();
         } else {
             //Restore previous fragment
             Fragment initFragment = null;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().add(R.id.main_fragment,
                     initFragment).commit();
         }
-
+        ((ActionBarTextChangeable) fragment).changeActionBarText(actionbar);
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.main_fragment, fragment).commit();
+        ((ActionBarTextChangeable) fragment).changeActionBarText(actionbar);
+
 
         // Highlight the selected item has been done by NavigationView
         menuItem.setChecked(true);

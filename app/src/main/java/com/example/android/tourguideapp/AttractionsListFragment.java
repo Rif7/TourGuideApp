@@ -12,9 +12,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public abstract class AttractionsListFragment extends android.support.v4.app.Fragment {
+public abstract class AttractionsListFragment extends android.support.v4.app.Fragment  implements ActionBarTextChangeable {
     protected AttractionType attractionType;
     private OnFragmentInteractionListener mListener;
+    protected static String toolbarName;
 
     public AttractionsListFragment() {
         // Required empty public constructor
@@ -31,9 +32,6 @@ public abstract class AttractionsListFragment extends android.support.v4.app.Fra
 
         final TouristAttractionAdapter adapter = new TouristAttractionAdapter(getActivity(),
                 TouristAttractionManager.getInstance().getTouristsAttractions(attractionType));
-
-        TextView listName = (TextView) rootView.findViewById(R.id.list_name);
-        listName.setText(attractionType.toString());
 
         ListView listView = (ListView) rootView.findViewById(R.id.attractions_list);
         listView.setAdapter(adapter);
@@ -70,7 +68,6 @@ public abstract class AttractionsListFragment extends android.support.v4.app.Fra
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 

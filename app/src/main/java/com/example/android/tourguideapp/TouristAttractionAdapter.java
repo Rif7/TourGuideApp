@@ -35,6 +35,8 @@ public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
         TextView attractionName = listItemView.findViewById(R.id.ta_item_name);
         attractionName.setText(touristAttraction.getName());
 
+        listItemView.setBackgroundColor(touristAttraction.getType().getDefaultColor());
+
         return listItemView;
     }
 

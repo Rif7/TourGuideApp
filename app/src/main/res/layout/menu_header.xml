@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/menu_header_height"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorHeader"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
     android:gravity="bottom">
 
-    <TextView
+    <ImageView
+        android:scaleType="fitCenter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kraków TODO"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/krakow_logo"/>
 
 </LinearLayout>
