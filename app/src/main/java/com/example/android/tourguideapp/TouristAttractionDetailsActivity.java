@@ -1,16 +1,16 @@
 package com.example.android.tourguideapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class TouristAttractionDetailsActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
         textDetails.setText(touristAttraction.getDescription());
 
 
-        TouristAttraction touristAttraction = TouristAttractionManager.getInstance().detailedTouristAttraction;
+        final TouristAttraction touristAttraction = TouristAttractionManager.getInstance().detailedTouristAttraction;
         if (touristAttraction.hasImageID()) {
             ImageView photo = (ImageView) findViewById(R.id.details_photo);
             photo.setImageResource(touristAttraction.getImageID());
@@ -43,6 +43,17 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
             text.setText(touristAttraction.getPhone());
             View item = (View) findViewById(R.id.details_phone);
             item.setVisibility(View.VISIBLE);
+            item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Prepare to dial
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:" + touristAttraction.getPhone()));
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    }
+                }
+            });
         }
 
         if (touristAttraction.hasWebsite()) {
@@ -50,6 +61,16 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
             text.setText(touristAttraction.getWebsite());
             View item = (View) findViewById(R.id.details_website);
             item.setVisibility(View.VISIBLE);
+            item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    String link = touristAttraction.getWebsite();
+                    if (!link.startsWith("http://")) link = "http://" + link;
+                    intent.setData(Uri.parse(link));
+                    startActivity(intent);
+                }
+            });
         }
 
         if (touristAttraction.hasLocation()) {
@@ -57,6 +78,14 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
             text.setText(touristAttraction.getLocation());
             View item = (View) findViewById(R.id.details_location);
             item.setVisibility(View.VISIBLE);
+            item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse("http://maps.google.com/?q=" + touristAttraction.getLocation()));
+                    startActivity(intent);
+                }
+            });
         }
     }
 
