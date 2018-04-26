@@ -12,17 +12,21 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public class AttractionsListFragment extends android.support.v4.app.Fragment {
-    public static AttractionType attractionType;
+public abstract class AttractionsListFragment extends android.support.v4.app.Fragment {
+    protected AttractionType attractionType;
     private OnFragmentInteractionListener mListener;
 
     public AttractionsListFragment() {
         // Required empty public constructor
     }
 
+
+    protected abstract void setAttractionType();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setAttractionType();
         View rootView = inflater.inflate(R.layout.fragment_attractions, container, false);
 
         final TouristAttractionAdapter adapter = new TouristAttractionAdapter(getActivity(),
@@ -65,18 +69,6 @@ public class AttractionsListFragment extends android.support.v4.app.Fragment {
         mListener = null;
     }
 
-
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

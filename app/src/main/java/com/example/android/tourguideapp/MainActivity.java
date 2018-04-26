@@ -73,24 +73,19 @@ public class MainActivity extends AppCompatActivity
                 fragmentClass = GeneralInformationFragment.class;
                 break;
             case R.id.mnu_sightseeing:
-                AttractionsListFragment.attractionType = AttractionType.SIGHTSEEING;
-                fragmentClass = AttractionsListFragment.class;
+                fragmentClass = SightseeingListFragment.class;
                 break;
             case R.id.mnu_hotels:
-                AttractionsListFragment.attractionType = AttractionType.HOTEL;
-                fragmentClass = AttractionsListFragment.class;
+                fragmentClass = HotelsListFragment.class;
                 break;
             case R.id.mnu_museums:
-                AttractionsListFragment.attractionType = AttractionType.MUSEUM;
-                fragmentClass = AttractionsListFragment.class;
+                fragmentClass = MuseumsListFragment.class;
                 break;
             case R.id.mnu_restaurants:
-                AttractionsListFragment.attractionType = AttractionType.RESTAURANT;
-                fragmentClass = AttractionsListFragment.class;
+                fragmentClass = RestaurantsListFragment.class;
                 break;
             case R.id.mnu_saved_places:
-                AttractionsListFragment.attractionType = AttractionType.SAVED;
-                fragmentClass = AttractionsListFragment.class;
+                fragmentClass = SavedPlacesListFragment.class;
                 break;
             default:
                 fragmentClass = GeneralInformationFragment.class;
