@@ -25,9 +25,5 @@
             android:icon="@drawable/ic_star_unsaved"
             android:id="@+id/mnu_saved_places"
             android:title="@string/saved_places" />
-        <item
-            android:icon="@drawable/ic_google_play"
-            android:id="@+id/mnu_interesting_apps"
-            android:title="@string/interesting_apps" />
     </group>
 </menu>
