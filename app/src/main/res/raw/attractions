@@ -18,23 +18,161 @@
     <list type="SIGHTSEEING">
         <entry>
             <name>Main Square</name>
-            <description>Biggest square in Europe</description>
-
-            <image_name>krakow_map</image_name>
-            <small_image_name>krakow_logo</small_image_name>
-            <phone_number>444 555 666</phone_number>
-            <website>www.rynek.pl</website>
-            <location>Krakow, Rynek  1</location>
+            <description>
+                The main square is a square space surrounded by historic townhouses (kamienice) and churches. The center of the square is dominated by the Cloth Hall (Sukiennice), rebuilt in 1555 in the Renaissance style, topped by a beautiful attic or Polish parapet decorated with carved masks. On one side of the cloth hall is the Town Hall Tower (Wieża ratuszowa), on the other the 10th century Church of St. Adalbert and 1898 Adam Mickiewicz Monument. Rising above the square are the Gothic towers of St. Mary's Basilica (Kościół Mariacki). Kraków Main Square does not have a town hall, because it has not survived to the present day.
+            </description>
+            <image_name>main_square</image_name>
+            <small_image_name>s_main_square</small_image_name>
+            <location>Main Square, Kraków</location>
         </entry>
         <entry>
             <name>Nowa Huta</name>
-            <description>Post Industrial Area</description>
+            <description>Nowa Huta is the easternmost district of Kraków, Poland. With more than 200,000 inhabitants, it is one of the most populous areas of the city. Until 1990, the neighboring districts were considered expansions of the original Nowa Huta district, and were linked by the same tramway system. They are now separate districts of Kraków.
+                Nowa Huta is one of only two planned socialist realist settlements or districts ever built and "one of the most renowned examples of deliberate social engineering" in the entire world. Built as a utopian ideal city, its street hierarchy, layout and certain grandeur of buildings often resemble Paris or London. The high abundance of parks and green areas in Nowa Huta make it the greenest corner of Kraków.</description>
+            <image_name>nowa_huta</image_name>
+            <small_image_name>s_nowa_huta</small_image_name>
+            <location>50.072222, 20.0375</location>
+        </entry>
+        <entry>
+            <name>Kopiec Kościuszki</name>
+            <description>
+                Kościuszko Mound (Polish: kopiec Kościuszki) in Kraków, Poland, erected by Cracovians in commemoration of the Polish national leader Tadeusz Kościuszko, is an artificial mound modeled after Kraków's prehistoric mounds of Krak and Wanda. A serpentine path leads to the top, approx. 326 metres (1,070 ft) above sea level, with a panoramic view of the Vistula River and the city. It was completed in November 1823. The location selected for the monument was the natural Blessed Bronisława Hill (Polish: Wzgórze bł. Bronisławy), also known as Sikornik, situated in the western part of Kraków's Zwierzyniec District.
+                Kościuszko Mound is one of Kraków's four memorial mounds, consisting of two prehistoric mounds, Krakus Mound and Wanda Mound, and two modern ones, Piłsudski Mound and Kościuszko Mound.
+                The construction of Kościuszko Mound was financed by donations from Poles living in all territories of Poland under foreign occupation. For three years beginning in 1820, people of all ages and class voluntarily constructed the Mound to the height of 34 metres (112 ft). Work was supervised by a Committee for the Construction of the Tadeusz Kościuszko Monument. At the base of the Mound, the Founding Act was deposited in a glass and marble case. At the top, a granite boulder, brought from the Tatra Mountains, was placed, bearing the inscription “Kościuszce” (To Kościuszko). Inside the mound, urns were buried with soil from the Polish and American battlefields where Kościuszko fought.</description>
+            <image_name>kopiec</image_name>
+            <small_image_name>s_kopiec</small_image_name>
+            <location>50.052833, 19.8895</location>
+        </entry>
+        <entry>
+            <name>Zakrzówek</name>
+            <description>Zakrzowek Lake, is a 20-minute walk from Wawel Castle has the unique distinction of being a hidden lagoon in an old mined quarry – indeed it is so hidden some people think it´s a myth.
+                In actual fact it is relatively easy to get to on foot and is well worth the visit. Dominated by the sheer limestone cliffs and dense thick foliage of the surrounding area, Zakrzowek Lake is blessed with stunning natural beauty.
+                During the summer the weather is hot enough to go swimming in the water and in some parts the surrounding cliffs are not too high, thus it is not uncommon for people to jump off them into the lagoon below – you need a head for heights though!</description>
+            <image_name>zakrzowek</image_name>
+            <small_image_name>s_zakrzowek</small_image_name>
+            <location>50.036389, 19.910556</location>
+        </entry>
+        <entry>
+            <name>Wawel</name>
+            <description>
+                Wawel Hill – a Jurassic limestone rock, a dominant feature in the landscape of Cracow (about 228 m above see level) was formed about 150 million years ago. Situated on the bank of the Vistula river, surrounded by waters and marshes, the hill provided a safe haven for people who have settled here since the Paleolithic Age. It is supposed that the Slav people started living on Wawel hill as early as the 7th century.
+                Early medieval legends tell stories about a dreadful dragon that lived in a cave on Wawel Hill, about his slayer Krakus, and about the latter’s daughter Wanda, who drowned herself in the Vistula rather than marry a German knight.
+                Towards the end of the first millennium A.D Wawel began to play the role of the centre of political power.
+            </description>
+            <image_name>wawel</image_name>
+            <small_image_name>s_wawel</small_image_name>
+            <location>50.053889, 19.934722</location>
         </entry>
     </list>
     <list type="HOTEL">
+        <entry>
+            <name>Vanilla Aparthotel</name>
+            <description>Aparthotel Vanilla offers accommodations in Krakow. Wieliczka is 12.9 km from the property. Free private parking is available on site.
+                All units have a flat-screen TV. Some units feature a sitting area and/or balcony. There is also a dining area and a kitchenette equipped with a microwave. A refrigerator and kettle are also provided. Every unit is fitted with a private bathroom with a shower.
+            </description>
+            <image_name>vanilla</image_name>
+            <small_image_name>s_vanilla</small_image_name>
+            <phone_number>+48 12 354 01 50</phone_number>
+            <website>http://www.aparthotelvanilla.pl</website>
+            <location>ul. Bobrzyńskiego 33, Kraków</location>
+        </entry>
+        <entry>
+            <name>Imperial Hotel</name>
+            <description>
+                Imperial Hotel has 33 fully equipped and functional rooms furnished in a combination of a timeless and functional style. Our rooms are located on four levels which are connected by a lift and staircases. All of them have a free and unlimited access to a password protected Internet, flat LCD TV, built-in hairdryer, toiletries, tea and coffee facilities, corkscrew, Minibar, bathrobes and as well as slippers for our guests. All rooms are equipped with a centrally controlled air-conditioning system and high quality fire detectors. Booking at our hotel is available in Single / Twin / Double / Family configuration and is divided into three categories: Classic, Premium and Deluxe.
+            </description>
+            <image_name>imperial</image_name>
+            <small_image_name>s_imperial</small_image_name>
+            <phone_number>+48 12 422 40 520</phone_number>
+            <website>https://imperial-hotel.pl</website>
+            <location>Rynek 26, Kraków</location>
+        </entry>
+        <entry>
+            <name>Hotel Francuski</name>
+            <description>
+                French hotel is located in historic centre of Kraków, opposite The Princes Czartoryski Museum, few meters from the old city walls and the Barbakan. Within easy reach there are many galleries, jewelry stores and during tourist season - also a bazaar with works of art, presented by the old defensive wall.
+                Whole French Hotel is filled with old elegance what is already evident upon entering the lobby and impressive staircase with columns. It is the oldest building in Kraków erected immediately as a hotel - was opened in 1912. Interior is influenced by the popular at that time an art deco style.
+                The rooms and suites are decorated with wallpapers, pictures, and graphics showing former Kraków, as well as solid, stylized furniture. The bathrooms are comfortably furnished and spotlessly clean. Some suites may be combined, by which the hotel is recognised among traveling families. Listening to a clock beating in the lobby or sipping tea in a cafe, you can travel in imagination hundred years to the past. The building is famous for almost a hundred years of its restaurant serving delicious Polish cuisine.
+            </description>
+            <image_name>francuski</image_name>
+            <small_image_name>s_francuski</small_image_name>
+            <phone_number>+48 666 195 831</phone_number>
+            <website>http://www.hotel-francuski.com.pl</website>
+            <location>Pijarska 13, Kraków</location>
+        </entry>
     </list>
     <list type="RESTAURANT">
+        <entry>
+            <name>Stara Zajezdnia</name>
+            <description>
+                Stara Zajezdnia Kraków by DeSilva is a place that combines history with modernity. The building features a beer hall with a mini brewery, a restaurant and a yard. This allows for organisation of both large events (galas, cocktail parties, conferences, concerts) and closed-circle events, such as business meetings or special events.
+                The facility boasts high quality AV equipment, screens (including a screen of 18m2) and LED monitors, which allows also for broadcasting of sport events.
+                On a daily basis Stara Zajezdnia is available to individual guests with a’la carte restaurant.
+            </description>
+            <image_name>zajezdnia</image_name>
+            <small_image_name>s_zajezdnia</small_image_name>
+            <phone_number>+48 668 873 726</phone_number>
+            <website>http://starazajezdniakrakow.pl</website>
+            <location>ul. Św. Wawrzyńca 12, Kraków</location>
+        </entry>
+        <entry>
+            <name>Veganic</name>
+            <description>
+                Veganic is a restaurant located in one of the trendiest places in Krakow – “Dolne Młyny”. It stands out for us, furnished with taste and attention to every detail, a bright and spacious interior with a pleasant atmosphere and a relaxed atmosphere.
+                An amazing advantage of the restaurant is a healthy and fashionable New Vegetable Cuisine, served with due care for the appearance of dishes. In addition, a rich card of wines, spirits and delicious cocktails await guests. In the summer we invite you to the beautiful garden, perfect for spending pleasant moments with your friends!
+            </description>
+            <image_name>veganic</image_name>
+            <small_image_name>s_veganic</small_image_name>
+            <website>http://veganic.restaurant</website>
+            <location>ul. Dolnych Młynów 10, Kraków</location>
+        </entry>
+        <entry>
+            <name>Boscaiola</name>
+            <description>
+                At the corner of Szewska and Jagiellońska streets, near the Main Square and the oldest university in Europe, there is Boscaiola-Pizzeria Ristorante, a sister restaurant of Trattoria Mammia Mia from Karmelicka street, which guarantees all guests a superb quality of food and an excellent taste. Because the menu is as befits Italian cuisine: light, abounding in seafood, beautifully-looking and tasty salads, risottos and thin crust pizza.
+                Boscaiola seduces from early hours of the morning with the smell of bread freshly baked by us and freshly made coffee. All our pasta, ravioli and gnocchi are made by us and they can be tasted in both intriguing and classical combinations. For dessert, we offer wonderful Italian desserts, such as a mascaropone cheesecake and a panna cotta with forest fruits sauce. It’s all topped with wines from our wine list, which adorn an impressive wine cellar with industrial wine shelves.
+            </description>
+            <phone_number>+48 12 426 41 27</phone_number>
+            <website>http://boscaiola.eu</website>
+            <location>ul. Szewska 10, Kraków</location>
+        </entry>
     </list>
     <list type="MUSEUM">
+        <entry>
+            <name>National Museum</name>
+            <description>
+                The National Museum in Kraków (Polish: Muzeum Narodowe w Krakowie), popularly abbreviated as MNK, established in 1879, is the main branch of Poland's National Museum, which has several independent branches with permanent collections around the country. The Museum consists of 21 departments which are divided by art period; 11 galleries, 2 libraries, and 12 conservation workshops. It holds some 780,000 art objects, spanning from classical archeology to modern art, with special focus on Polish painting.[1][2]
+            </description>
+            <small_image_name>s_mn</small_image_name>
+            <phone_number>+48 12 433 55 00</phone_number>
+            <website>http://mnk.pl</website>
+            <location>Al. 3 Maja 1, 30-062 Kraków</location>
+        </entry>
+        <entry>
+            <name>Polish Aviation Museum</name>
+            <description>
+                The Polish Aviation Museum (Polish: Muzeum Lotnictwa Polskiego w Krakowie) is a large museum of old aircraft and aircraft engines in Kraków, Poland. It is located at the site of the no-longer functional Kraków-Rakowice-Czyżyny Airport. This airfield, established by Austria-Hungary in 1912, is one of the oldest in the world. The museum opened in 1964, after the airfield closed in 1963. Has been scored as eighth world's best aviation museum by CNN.[1]
+                For the first half century of its existence the museum used four hangars of the former airfield to display its exhibits. These buildings were not originally designed for this purpose and suffered from various inadequacies, notably insufficient heating in winter. The situation improved when a new main building for the museum opened on 18 September 2010.[2]
+            </description>
+            <phone_number>+48 12 640 99 600</phone_number>
+            <website>http://www.muzeumlotnictwa.pl</website>
+            <location>Kraków, al. Jana Pawła II 39</location>
+        </entry>
+        <entry>
+            <name>Schindler's Factory</name>
+            <description>
+                Exhibition Kraków under Nazi Occupation 1939–1945 is located in the former administrative building of Oskar Schindler’s Enamel Factory at 4 Lipowa Street.
+                The exhibition is primarily a story about Kraków and its inhabitants, both Polish and Jewish, during World War Two. It is also a story about Nazi Germans – the occupiers who arrived here on 6 September 1939, brutally disrupting Kraków’s centuries-long history of Polish-Jewish relations. The great history of World War Two intersects here with everyday life, and the personal dramas of individual people overlap with the tragedy which affected the whole world.
+                The wartime history of Deutsche Emailwarenfabrik – DEF – and its owner Oskar Schindler was brought into the limelight in 1993 by Steven Spielberg’s film Schindler’s List. Ever since that time, tourists from all over the world have been coming to Lipowa Street to visit the place where Schindler saved the lives of over a thousand people. The character of Oskar Schindler and the life stories of the Kraków Jews he saved are presented in the exhibition as part of the city’s complex wartime history. Oskar Schindler’s heroic attitude is presented in close-up in his former office – luckily, the historic room located in the factory’s administrative building has been preserved intact throughout the years. The dominant feature here is the symbolic “Survivors’ Ark” made of thousands of enamelled pots, similar to those manufactured by Schindler’s employees during the war.
+                The exhibition scenario was prepared by a team of Kraków-based specialists (Katarzyna Zimmerer, Grzegorz Jeżowski, Edyta Gawron and Barbara Zbroja) headed by the curator of the exhibition Monika Bednarek. The narrative created by that team combines documentary photographs, eyewitness accounts, film documentaries and multimedia presentations. All of these elements are put together to make a vivid, chronological vision of the city’s history. The exhibition presents the tragedy of the war both in the individual, and  in the collective dimension, but it also portrays everyday life in the Nazi-occupied Kraków as it is immortalized in ordinary objects, photographs, newspapers, personal and official documents.
+                The new exhibition has been created with the use of various means that go beyond the framework of traditional museum exhibitions. The designers and creators of its artistic layout – stage designer Michał Urban and theatre director Łukasz Czuj – have given it the character of a theatrical, or cinematic narrative. The theatrical reconstructions of Kraków’s historical city space are juxtaposed with sculptural installations metaphorically embracing the city’s wartime history. The spectator voyeuristically wanders through the city: walking down the cobbled streets, s/he pops in at a photographer’s shop, peeps into an authentic stereoscope which used to belong to a pre-war studio on Szczepańska St, boards a tram to watch a documentary portraying the everyday life of the city which is screened on the tram’s windows, walks through the narrow, labyrinthine streets of the Ghetto to visit a typical Jewish apartment, and then moves to the Płaszów camp, together with the Ghetto residents. Looking though the windows of a hairdresser’s salon s/he watches the Polish underground’s attempt on the life of Wilhelm Koppe. A moment later, looking though the window of a gloomy basement, s/he witnesses a street round-up, and finally, trapped in the fortified city, s/he waits for the Red Army to arrive.
+                The five key points in the city’s history are marked by the "memory machines" – the stampers which every visitor can use to obtain a commemorative stamp associated with the given historical event. By using the "memory machines" visitors can produce their own, tangible “time documents” which they can take home with them.
+                The symbolic summary of the exhibition is the "Hall of Choices" – a sculptural installation symbolizing the various ethical dilemmas and attitudes one could encounter during the war.
+                The 45 exhibition rooms have been used to present Kraków’s history in an almost tangible way, enabling visitors to get a personal experience of the past, and to feel the dramatic emotions shared by the city’s wartime residents. Extensive multimedia solutions (including 30 interactive multimedia kiosks with touchscreens, 70 soundtracks, and 15 video projectors) create an attractive, contemporary, and visitor-oriented museum environment.
+                The motto of this permanent exhibition and of the entire new branch of the Historical Museum of the City of Kraków is “the factory of memory”. The space of remembrance created at the former Enamel Factory offers the visitors an opportunity to confront the past in a personal way.
+                Honorary patronage of the exhibition: Ambassador of Israel to Poland Mr. Zvi Rav-Ner, Ambassador of Germany to Poland Mr. Michael H. Gerdts, Consul General of the United States to Poland Mr. Allen Greenberg and Minister of Culture and National Heritage Mr. Bogdan Zdrojewski.
+            </description>
+            <location>Lipowa 4, Kraków</location>
+        </entry>
     </list>
 </attractions>
