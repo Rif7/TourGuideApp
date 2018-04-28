@@ -22,25 +22,24 @@ public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
 
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.tourist_attraction_item, parent, false);
         }
 
         TouristAttraction touristAttraction = getItem(position);
 
-        ImageView picture = listItemView.findViewById(R.id.ta_item_image);
+        ImageView picture = convertView.findViewById(R.id.ta_item_image);
         picture.setImageResource(touristAttraction.getSmallImageID());
 
-        TextView attractionName = listItemView.findViewById(R.id.ta_item_name);
+        TextView attractionName = convertView.findViewById(R.id.ta_item_name);
         attractionName.setText(touristAttraction.getName());
 
-        listItemView.setBackgroundColor(touristAttraction.getType().getDefaultColor());
+        convertView.setBackgroundColor(touristAttraction.getType().getDefaultColor());
 
-        listItemView.setBackgroundColor(ContextCompat.getColor(context, touristAttraction.getType().getDefaultColor()));
+        convertView.setBackgroundColor(ContextCompat.getColor(context, touristAttraction.getType().getDefaultColor()));
 
-        return listItemView;
+        return convertView;
     }
 
 }
