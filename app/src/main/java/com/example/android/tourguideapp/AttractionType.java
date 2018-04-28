@@ -1,23 +1,25 @@
 package com.example.android.tourguideapp;
 
+import android.content.Context;
+
 public enum AttractionType {
-    SIGHTSEEING("SIGHTSEEING"),
-    HOTEL("HOTEL"),
-    RESTAURANT("RESTAURANT"),
-    MUSEUM("MUSEUM"),
-    SAVED("SAVED PLACE");
+    SIGHTSEEING(R.string.SIGHTSEEING),
+    HOTEL(R.string.HOTEL),
+    RESTAURANT(R.string.RESTAURANT),
+    MUSEUM(R.string.MUSEUM),
+    SAVED(R.string.SAVED_PLACE);
 
     private int defaultSmallImageID;
     private int defaultColor;
 
-    private final String name;
+    private final int name;
 
-    AttractionType(String s) {
-        name = s;
+    AttractionType(int resID) {
+        name = resID;
     }
 
-    public String toString() {
-        return this.name;
+    public String getName(Context context) {
+        return context.getString(this.name);
     }
 
     static {
@@ -42,10 +44,10 @@ public enum AttractionType {
         return defaultSmallImageID;
     }
 
-    public static AttractionType getAttractionType(String name) {
+    public static AttractionType getAttractionType(Context context, String name) {
         AttractionType result = AttractionType.SIGHTSEEING; // default
         for (AttractionType at: AttractionType.values()) {
-            if (at.name.equals(name)) {
+            if (at.getName(context).equals(name)) {
                 result = at;
             }
         }

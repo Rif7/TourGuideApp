@@ -24,4 +24,31 @@
     <string name="icon_more">icon more</string>
     <string name="add_to_saved">add to saved</string>
 
+
+    <string name="tel">tel:</string>
+    <string name="http">http://</string>
+    <string name="google_maps_search_link">http://maps.google.com/?q=</string>
+    <string name="fancy_restaurants">Fancy Restaurants</string>
+    <string name="amazing_spots">Amazing spots</string>
+    <string name="finest_places_to_sleep">Finest places to sleep</string>
+    <string name="the_best_museums">The best Museums</string>
+    <string name="your_saved_places">Your saved places</string>
+    <string name="drawable">drawable</string>
+
+    <string name="xml_list">list</string>
+    <string name="xml_entry">entry</string>
+    <string name="xml_location">location</string>
+    <string name="xml_website">website</string>
+    <string name="xml_phone_number">phone_number</string>
+    <string name="xml_small_image_name">small_image_name</string>
+    <string name="xml_image_name">image_name</string>
+    <string name="xml_description">description</string>
+    <string name="xml_name">name</string>
+    <string name="xml_type">type</string>
+    <string name="SIGHTSEEING">SIGHTSEEING</string>
+    <string name="HOTEL">HOTEL</string>
+    <string name="RESTAURANT">RESTAURANT</string>
+    <string name="MUSEUM">MUSEUM</string>
+    <string name="SAVED_PLACE">SAVED PLACE</string>
+
 </resources>

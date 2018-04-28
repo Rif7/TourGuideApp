@@ -10,6 +10,6 @@ public class SavedPlacesListFragment extends AttractionsListFragment {
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("Your saved places");
+        actionBar.setTitle(R.string.your_saved_places);
     }
 }

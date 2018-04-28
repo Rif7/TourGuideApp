@@ -52,7 +52,7 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     // Prepare to dial
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:" + touristAttraction.getPhone()));
+                    intent.setData(Uri.parse(getString(R.string.tel) + touristAttraction.getPhone()));
                     if (intent.resolveActivity(getPackageManager()) != null) {
                         startActivity(intent);
                     }
@@ -70,7 +70,7 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     String link = touristAttraction.getWebsite();
-                    if (!link.startsWith("http://")) link = "http://" + link;
+                    if (!link.startsWith(getString(R.string.http))) link = R.string.http + link;
                     intent.setData(Uri.parse(link));
                     startActivity(intent);
                 }
@@ -86,7 +86,7 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://maps.google.com/?q=" + touristAttraction.getLocation()));
+                    intent.setData(Uri.parse(getString(R.string.google_maps_search_link) + touristAttraction.getLocation()));
                     startActivity(intent);
                 }
             });

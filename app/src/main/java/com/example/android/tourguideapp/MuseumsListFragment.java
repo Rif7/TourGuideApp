@@ -11,6 +11,6 @@ public class MuseumsListFragment extends AttractionsListFragment {
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("The best Museums");
+        actionBar.setTitle(R.string.the_best_museums);
     }
 }

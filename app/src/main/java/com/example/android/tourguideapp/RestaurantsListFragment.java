@@ -10,6 +10,6 @@ public class RestaurantsListFragment extends AttractionsListFragment {
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("Fancy Restaurants");
+        actionBar.setTitle(R.string.fancy_restaurants);
     }
 }

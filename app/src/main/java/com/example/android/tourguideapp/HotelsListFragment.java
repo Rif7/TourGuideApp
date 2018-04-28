@@ -10,6 +10,6 @@ public class HotelsListFragment extends AttractionsListFragment {
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("Finest places to sleep");
+        actionBar.setTitle(R.string.finest_places_to_sleep);
     }
 }

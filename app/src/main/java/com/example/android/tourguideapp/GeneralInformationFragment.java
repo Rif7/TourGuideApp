@@ -47,6 +47,6 @@ public class GeneralInformationFragment extends android.support.v4.app.Fragment 
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("General Information");
+        actionBar.setTitle(R.string.general_information);
     }
 }

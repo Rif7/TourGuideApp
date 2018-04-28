@@ -33,24 +33,11 @@ public class TouristAttractionManager {
         return touristsAttractions.get(type);
     }
 
-    private void addAttraction(AttractionType type, String name, String description) {
-        addAttraction(type, name, description, TouristAttraction.NO_IMAGE, TouristAttraction.NO_IMAGE,
-        null, null, null);
-    }
-
     private void addAttraction(AttractionType type, String name, String description,
                               int imageID, int smallImageID, String phone, String website, String location) {
         touristsAttractions.get(type).add(
                 new TouristAttraction(type, name, description, imageID, smallImageID,
                 phone, website, location));
-    }
-
-    private void addAttraction(String attractionTypeName, String name, String description,
-                               int imageID, int smallImageID, String phone, String website, String location) {
-        AttractionType type = AttractionType.getAttractionType(attractionTypeName);
-        touristsAttractions.get(type).add(
-                new TouristAttraction(type, name, description, imageID, smallImageID,
-                        phone, website, location));
     }
 
     public void addSavedTouristAttractions(TouristAttraction touristAttractionToSave) {
@@ -69,6 +56,18 @@ public class TouristAttractionManager {
         } else {
             isLoaded = true;
         }
+        final String LOCATION = context.getString(R.string.xml_location);
+        final String WEBSITE = context.getString(R.string.xml_website);
+        final String PHONE_NUMBER = context.getString(R.string.xml_phone_number);
+        final String DRAWABLE = context.getString(R.string.drawable);
+        final String SMALL_IMAGE_NAME = context.getString(R.string.xml_small_image_name);
+        final String IMAGE_NAME = context.getString(R.string.xml_image_name);
+        final String DESCRIPTION = context.getString(R.string.xml_description);
+        final String NAME = context.getString(R.string.xml_name);
+        final String TYPE = context.getString(R.string.xml_type);
+        final String LIST = context.getString(R.string.xml_list);
+        final String ENTRY = context.getString(R.string.xml_entry);
+        
 
         XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
         factory.setNamespaceAware(true);
@@ -92,12 +91,12 @@ public class TouristAttractionManager {
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
             // Begin of the list attractions for current type
-            if (eventType == XmlPullParser.START_TAG && parser.getName().equals("list")) {
-                type = AttractionType.getAttractionType(parser.getAttributeValue(null, "type"));
+            if (eventType == XmlPullParser.START_TAG && parser.getName().equals(LIST)) {
+                type = AttractionType.getAttractionType(context, parser.getAttributeValue(null, TYPE));
             }
 
             // Begin of the current attraction data
-            if (eventType == XmlPullParser.START_TAG && parser.getName().equals("entry")) {
+            if (eventType == XmlPullParser.START_TAG && parser.getName().equals(ENTRY)) {
                 name = null;
                 description = null;
                 imageID = TouristAttraction.NO_IMAGE;
@@ -109,40 +108,32 @@ public class TouristAttractionManager {
 
             // Data fields
             if (eventType == XmlPullParser.START_TAG) {
-                switch (parser.getName()) {
-                    case "name":
-                        name = parser.nextText();
-                        break;
-                    case "description":
-                        description = parser.nextText();
-                        break;
-                    case "image_name":
-                        imageID = context.getResources().getIdentifier(parser.nextText(),
-                                "drawable", context.getPackageName());
-                        break;
-                    case "small_image_name":
-                        smallImageID = context.getResources().getIdentifier(parser.nextText(),
-                                "drawable", context.getPackageName());
-                        break;
-                    case "phone_number":
-                        phone = parser.nextText();
-                        break;
-                    case "website":
-                        website = parser.nextText();
-                        break;
-                    case "location":
-                        location = parser.nextText();
-                        break;
+                if (parser.getName().equals(NAME)){
+                    name = parser.nextText();
+                } else if (parser.getName().equals(DESCRIPTION)) {
+                    description = parser.nextText();
+                } else if(parser.getName().equals(IMAGE_NAME)) {
+                    imageID = context.getResources().getIdentifier(parser.nextText(),
+                            DRAWABLE, context.getPackageName());
+                } else if(parser.getName().equals(SMALL_IMAGE_NAME)) {
+                    smallImageID = context.getResources().getIdentifier(parser.nextText(),
+                            DRAWABLE, context.getPackageName());
+                } else if(parser.getName().equals(PHONE_NUMBER)) {
+                    phone = parser.nextText();
+                } else if(parser.getName().equals(WEBSITE)) {
+                    website = parser.nextText();
+                } else if(parser.getName().equals(LOCATION)) {
+                    location = parser.nextText();
                 }
             }
 
             // End of the current attraction data
-            if (eventType == XmlPullParser.END_TAG && parser.getName().equals("entry")) {
+            if (eventType == XmlPullParser.END_TAG && parser.getName().equals(ENTRY)) {
                 addAttraction(type, name, description, imageID, smallImageID,
                         phone, website, location);
             }
 
-            if (eventType == XmlPullParser.END_TAG && parser.getName().equals("list")) {
+            if (eventType == XmlPullParser.END_TAG && parser.getName().equals(LIST)) {
                 // Begin of the list attractions for current type
                 type = null;
             }

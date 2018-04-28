@@ -10,6 +10,6 @@ public class SightseeingListFragment extends AttractionsListFragment {
 
     @Override
     public void changeActionBarText(ActionBar actionBar) {
-        actionBar.setTitle("Amazing spots");
+        actionBar.setTitle(R.string.amazing_spots);
     }
 }
