@@ -2,6 +2,7 @@ package com.example.android.tourguideapp;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,9 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
 
 
         final TouristAttraction touristAttraction = TouristAttractionManager.getInstance().detailedTouristAttraction;
+        View view = findViewById(R.id.details_item_root);
+        view.setBackgroundColor(ContextCompat.getColor(this, touristAttraction.getType().getDefaultColor()));
+
         if (touristAttraction.hasImageID()) {
             ImageView photo = (ImageView) findViewById(R.id.details_photo);
             photo.setImageResource(touristAttraction.getImageID());

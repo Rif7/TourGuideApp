@@ -2,6 +2,7 @@ package com.example.android.tourguideapp;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +13,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
-    ArrayList touristAttractions;
+    private ArrayList touristAttractions;
+    private Context context;
 
     TouristAttractionAdapter(Context context, ArrayList<TouristAttraction> touristAtracions) {
         super(context, 0, touristAtracions);
         this.touristAttractions = touristAtracions;
+        this.context = context;
     }
 
     @Override
@@ -36,6 +39,8 @@ public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
         attractionName.setText(touristAttraction.getName());
 
         listItemView.setBackgroundColor(touristAttraction.getType().getDefaultColor());
+
+        listItemView.setBackgroundColor(ContextCompat.getColor(context, touristAttraction.getType().getDefaultColor()));
 
         return listItemView;
     }
