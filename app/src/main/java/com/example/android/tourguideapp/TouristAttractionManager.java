@@ -26,14 +26,14 @@ public class TouristAttractionManager {
     }
 
     private void addAttraction(AttractionType type, String name, String description) {
-        addAttraction(type, name, description, TouristAttraction.NO_IMAGE,
+        addAttraction(type, name, description, TouristAttraction.NO_IMAGE, TouristAttraction.NO_IMAGE,
         null, null, null);
     }
 
     private void addAttraction(AttractionType type, String name, String description,
-                              int imageID, String phone, String website, String location) {
+                              int imageID, int smallImageID, String phone, String website, String location) {
         touristsAttractions.get(type).add(
-                new TouristAttraction(type, name, description, imageID,
+                new TouristAttraction(type, name, description, imageID, smallImageID,
                 phone, website, location));
     }
 
@@ -50,7 +50,7 @@ public class TouristAttractionManager {
     public void createAttractions() {
         // temp dummy data TODO
         addAttraction(AttractionType.SIGHTSEEING, "Main Square", "Biggest square in Europe",
-                TouristAttraction.NO_IMAGE, "444 555 666","www.rynek.pl" , "Krakow, Rynek  1");
+                R.drawable.krakow_map, R.drawable.krakow_logo,  "444 555 666","www.rynek.pl" , "Krakow, Rynek  1");
         addAttraction(AttractionType.SIGHTSEEING, "Nowa Huta", "Post Industrial Area");
     }
 }

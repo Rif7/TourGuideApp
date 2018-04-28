@@ -11,18 +11,20 @@ public class TouristAttraction {
     private boolean isSaved;
 
     // Optional
-    private int imageID;
+    private int imageID;        // to show in details
+    private int smallImageID;   // to show in list
     private String phone;
     private String website;
     private String location;
 
     TouristAttraction(AttractionType type, String name, String description,
-                      int imageID, String phone, String website, String location) {
+                      int imageID, int smallImageID, String phone, String website, String location) {
         this.type = type;
         this.name = name;
         this.description = description;
         this.isSaved = false;
         this.imageID = imageID;
+        this.smallImageID = smallImageID;
         this.phone = phone;
         this.website = website;
         this.location = location;
@@ -40,14 +42,16 @@ public class TouristAttraction {
         return description;
     }
 
-    public int getImageID() {
-        if (imageID != NO_IMAGE) {
-            return imageID;
+    public int getSmallImageID() {
+        if (smallImageID != NO_IMAGE) {
+            return smallImageID;
         } else {
             return type.getDefaultImageID();
         }
 
     }
+
+    public int getImageID() { return imageID; }
 
     public String getPhone() {
         return phone;
@@ -59,6 +63,10 @@ public class TouristAttraction {
 
     public String getLocation() {
         return location;
+    }
+
+    public boolean hasSmallImageID() {
+        return smallImageID != NO_IMAGE;
     }
 
     public boolean hasImageID() {

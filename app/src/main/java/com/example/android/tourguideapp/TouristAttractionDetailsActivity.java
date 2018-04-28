@@ -33,7 +33,7 @@ public class TouristAttractionDetailsActivity extends AppCompatActivity {
 
 
         final TouristAttraction touristAttraction = TouristAttractionManager.getInstance().detailedTouristAttraction;
-        if (touristAttraction.hasImageID()) {
+        if (touristAttraction.hasSmallImageID()) {
             ImageView photo = (ImageView) findViewById(R.id.details_photo);
             photo.setImageResource(touristAttraction.getImageID());
             photo.setVisibility(View.VISIBLE);

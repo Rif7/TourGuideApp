@@ -30,7 +30,7 @@ public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
         TouristAttraction touristAttraction = getItem(position);
 
         ImageView picture = listItemView.findViewById(R.id.ta_item_image);
-        picture.setImageResource(touristAttraction.getImageID());
+        picture.setImageResource(touristAttraction.getSmallImageID());
 
         TextView attractionName = listItemView.findViewById(R.id.ta_item_name);
         attractionName.setText(touristAttraction.getName());
