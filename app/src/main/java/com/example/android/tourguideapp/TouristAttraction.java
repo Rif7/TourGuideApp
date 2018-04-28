@@ -46,7 +46,7 @@ public class TouristAttraction {
         if (smallImageID != NO_IMAGE) {
             return smallImageID;
         } else {
-            return type.getDefaultImageID();
+            return type.getDefaultSmallImageID();
         }
 
     }

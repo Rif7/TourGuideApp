@@ -7,7 +7,7 @@ public enum AttractionType {
     MUSEUM("MUSEUM"),
     SAVED("SAVED PLACE");
 
-    private int defaultImageID;
+    private int defaultSmallImageID;
     private int defaultColor;
 
     private final String name;
@@ -21,10 +21,10 @@ public enum AttractionType {
     }
 
     static {
-        SIGHTSEEING.defaultImageID = R.drawable.ic_sightseeing;
-        HOTEL.defaultImageID = R.drawable.ic_hotel;
-        RESTAURANT.defaultImageID = R.drawable.ic_restaurant;
-        MUSEUM.defaultImageID = R.drawable.ic_museum;
+        SIGHTSEEING.defaultSmallImageID = R.drawable.ic_sightseeing;
+        HOTEL.defaultSmallImageID = R.drawable.ic_hotel;
+        RESTAURANT.defaultSmallImageID = R.drawable.ic_restaurant;
+        MUSEUM.defaultSmallImageID = R.drawable.ic_museum;
     }
 
     static {
@@ -38,8 +38,18 @@ public enum AttractionType {
         return defaultColor;
     }
 
-    public int getDefaultImageID() {
-        return defaultImageID;
+    public int getDefaultSmallImageID() {
+        return defaultSmallImageID;
+    }
+
+    public static AttractionType getAttractionType(String name) {
+        AttractionType result = AttractionType.SIGHTSEEING; // default
+        for (AttractionType at: AttractionType.values()) {
+            if (at.name.equals(name)) {
+                result = at;
+            }
+        }
+        return result;
     }
 
 }

@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
+        try {
+             TouristAttractionManager.getInstance().createAttractions(getApplicationContext());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         // Setting Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

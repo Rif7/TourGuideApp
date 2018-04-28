@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template
+<entry>
+    Required
+    <name></name>
+    <description></description>
+
+    Optional
+    <image_name></image_name>
+    <small_image_name></small_image_name>
+    <phone_number></phone_number>
+    <website></website>
+    <location></location>
+</entry>
+-->
+
+<attractions>
+    <list type="SIGHTSEEING">
+        <entry>
+            <name>Main Square</name>
+            <description>Biggest square in Europe</description>
+
+            <image_name>krakow_map</image_name>
+            <small_image_name>krakow_logo</small_image_name>
+            <phone_number>444 555 666</phone_number>
+            <website>www.rynek.pl</website>
+            <location>Krakow, Rynek  1</location>
+        </entry>
+        <entry>
+            <name>Nowa Huta</name>
+            <description>Post Industrial Area</description>
+        </entry>
+    </list>
+    <list type="HOTEL">
+    </list>
+    <list type="RESTAURANT">
+    </list>
+    <list type="MUSEUM">
+    </list>
+</attractions>
