@@ -13,12 +13,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
-    private ArrayList touristAttractions;
     private Context context;
 
     TouristAttractionAdapter(Context context, ArrayList<TouristAttraction> touristAtracions) {
         super(context, 0, touristAtracions);
-        this.touristAttractions = touristAtracions;
         this.context = context;
     }
 

@@ -3,15 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/menu_header_height"
     android:background="@color/colorHeader"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:scaleType="fitCenter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/krakow_logo"/>
+        android:contentDescription="@string/header_image"
+        android:scaleType="fitCenter"
+        android:src="@drawable/krakow_logo" />
 
 </LinearLayout>

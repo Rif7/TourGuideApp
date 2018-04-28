@@ -13,6 +13,15 @@
     <string name="short_information">Krakow is the second largest and one of the oldest
         cities in Poland. Situated on the Vistula River in the Lesser Poland region.
         Kraków has traditionally been one of the leading centres of Polish academic,
-        cultural, and artistic life and is one of Poland's most important economic hubs.</string>
+        cultural, and artistic life and is one of Poland\'s most important economic hubs.</string>
+
+    <string name="header_image">header_image</string>
+    <string name="bigger_photo_in_details">bigger photo in details</string>
+    <string name="phone_icon">phone icon</string>
+    <string name="website_icon">website icon</string>
+    <string name="location_icon">location icon</string>
+    <string name="small_preview_image_for_tourist_attraction">small preview image for tourist attraction</string>
+    <string name="icon_more">icon more</string>
+    <string name="add_to_saved">add to saved</string>
 
 </resources>

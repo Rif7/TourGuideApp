@@ -7,7 +7,7 @@
     <dimen name="menu_header_height">144dp</dimen>
 
     <!-- List adapter -->
-    <dimen name="list_adapter_heigtht">80dp</dimen>
+    <dimen name="list_adapter_height">80dp</dimen>
 
     <!-- Details Activity -->
     <dimen name="details_photo_height">300dp</dimen>

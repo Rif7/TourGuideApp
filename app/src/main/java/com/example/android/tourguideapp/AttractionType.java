@@ -12,7 +12,7 @@ public enum AttractionType {
 
     private final String name;
 
-    private AttractionType(String s) {
+    AttractionType(String s) {
         name = s;
     }
 
